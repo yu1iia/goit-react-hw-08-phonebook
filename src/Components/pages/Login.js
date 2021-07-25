@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { authOperations } from '../redux/auth';
+import authOperations from '../../redux/auth/authOperations';
 
 const styles = {
   form: {
@@ -9,13 +9,12 @@ const styles = {
   label: {
     display: 'flex',
     flexDirection: 'column',
-    marginBottom: 15,
+    padding: 4,
   },
 };
 
-class RegisterView extends Component {
+class LoginPage extends Component {
   state = {
-    name: '',
     email: '',
     password: '',
   };
@@ -27,33 +26,18 @@ class RegisterView extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.onRegister(this.state);
-
-    this.setState({ name: '', email: '', password: '' });
+    this.props.onLogin({ ...this.state });
+    this.setState({ email: '', password: '' });
   };
 
   render() {
-    const { name, email, password } = this.state;
+    const { email, password } = this.state;
 
     return (
       <div>
-        <h1>Registration page</h1>
+        <h1>Login page</h1>
 
-        <form
-          onSubmit={this.handleSubmit}
-          style={styles.form}
-          autoComplete="off"
-        >
-          <label style={styles.label}>
-            Name
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-
+        <form onSubmit={this.handleSubmit} style={styles.form}>
           <label style={styles.label}>
             Email
             <input
@@ -69,20 +53,20 @@ class RegisterView extends Component {
             <input
               type="password"
               name="password"
+              autoComplete="on"
               value={password}
               onChange={this.handleChange}
             />
           </label>
 
-          <button type="submit">Sign up</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = {
-  onRegister: authOperations.register,
-};
+export default connect(null, { onLogin: authOperations.logIn })(LoginPage);
 
-export default connect(null, mapDispatchToProps)(RegisterView);
+// token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjVmNzU0Zjg1NTRiMDAwMTdlYWMxNWMiLCJpYXQiOjE2MDAwOTQ4NDJ9.fy1ldCjRzQe4rcZxl5rMUf5D0GHy1hcjf2ttttgsINE"
+// user: {name: "Oleg Khodakivskyi", email: "areqine@gmail.com"}

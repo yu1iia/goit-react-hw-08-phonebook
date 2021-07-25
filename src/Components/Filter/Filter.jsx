@@ -1,39 +1,31 @@
-import { connect } from 'react-redux';
-import { changeFilter } from '../../redux/contacts/actions';
-import { getFilter } from '../../redux/contacts/selectors';
-import PropTypes from 'prop-types';
-import s from './Filter.module.css';
+import React from "react";
+import { connect } from "react-redux";
+import phoneBookActions from "../../redux/phoneBookActions/phoneBookActions";
+import phoneBookSelectors from "../../redux/phoneBookActions/phoneBookSelectors";
 
-const Filter = ({ value, onChange }) => (
+const Filter = ({ value, onChangeFilter }) => (
   <>
-    <label className={s.filter_label}>
-      Filter
+    <label>
+      <p>Find contacts by name</p>
       <input
-        className={s.filter_input}
-        value={value}
         type="text"
         name="filter"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        onChange={onChange}
+        value={value}
+        onChange={(e) => {
+          // console.log(e.target.value);
+          onChangeFilter(e.target.value);
+        }}
       />
     </label>
   </>
 );
 
-Filter.defaultProps = {
-  value: '',
-};
-Filter.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = state => ({
-  value: getFilter(state),
+const mapStateToProps = (state) => ({
+  value: phoneBookSelectors.getFilter(state),
 });
 
-const mapDispatchToProps = dispatch => ({
-  onChange: e => dispatch(changeFilter(e.target.value)),
-});
+const mapDispatchToProps = {
+  onChangeFilter: phoneBookActions.filter,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);
