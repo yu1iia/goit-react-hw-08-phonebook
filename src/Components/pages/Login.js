@@ -68,5 +68,3 @@ class LoginPage extends Component {
 
 export default connect(null, { onLogin: authOperations.logIn })(LoginPage);
 
-// token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjVmNzU0Zjg1NTRiMDAwMTdlYWMxNWMiLCJpYXQiOjE2MDAwOTQ4NDJ9.fy1ldCjRzQe4rcZxl5rMUf5D0GHy1hcjf2ttttgsINE"
-// user: {name: "Oleg Khodakivskyi", email: "areqine@gmail.com"}

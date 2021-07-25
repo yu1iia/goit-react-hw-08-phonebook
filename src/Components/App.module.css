@@ -3,7 +3,7 @@
   margin-bottom: 20px;
   font-size: 34px;
   font-weight: 700;
-  color: rgb(6, 6, 248);
+  color: rgb(115, 115, 120);
 }
 .contactListTitle {
   font-size: 36px;
@@ -19,9 +19,9 @@
   transition: all 1500ms linear;
 }
 .welcomeTitle {
-  color: rgb(6, 6, 248);
+  color: rgb(115, 115, 120);
   font-size: 26px;
   font-family: Arial, Helvetica, sans-serif;
   margin: 50px auto;
-  text-align: center;
+  text-align: right;
 }
