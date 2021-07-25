@@ -2,25 +2,26 @@
   "name": "goit-react-hw-08-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yu1iia.github.io/goit-react-hw-08-phonebook",
+  "homepage": "https://github.com/yu1iia/goit-react-hw-08-phonebook",
   "dependencies": {
-    "@reduxjs/toolkit": "^1.6.1",
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.21.1",
-    "chokidar": "^3.5.2",
-    "gh-pages": "^3.2.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.20.0",
+    "bootstrap": "^5.0.2",
+    "gh-pages": "^3.1.0",
+    "memoizee": "^0.4.14",
+    "react": "^16.13.1",
+    "react-bootstrap": "^2.0.0-beta.4",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "3.4.3",
+    "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
-    "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
-    "toolkit": "^1.5.4",
-    "web-vitals": "^1.1.1"
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,14 +29,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "prepare": "husky install"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -50,18 +47,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.30.0",
-    "husky": "^7.0.1",
-    "lint-staged": "^11.0.1",
-    "prettier": "^2.3.2"
-  },
-  "files.autoSave": "onFocusChange",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "prettier": "^2.1.1",
+    "redux-devtools-extension": "^2.13.9"
   }
 }
