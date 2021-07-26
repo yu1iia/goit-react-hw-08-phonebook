@@ -31,6 +31,10 @@ const logoutSuccess = () => ({
   type: authActionType.LOGOUT_SUCCESS,
 });
 
+const logoutError = () => ({
+  type: authActionType.LOGOUT_ERROR,
+});
+
 // ---- GET CURRENT USER ----
 const getCurrentUserRequest = token => ({
   type: authActionType.GET_CURRENT_USER_REQUEST,
@@ -55,6 +59,7 @@ export default {
   loginError,
 
   logoutSuccess,
+  logoutError,
 
   getCurrentUserRequest,
   getCurrentUserSuccess,

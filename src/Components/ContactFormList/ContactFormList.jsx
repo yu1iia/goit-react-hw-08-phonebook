@@ -21,7 +21,6 @@ const ContactFormList = ({ contacts, onRemoveContacts }) => (
           unmountOnExit
         >
           <ContactFormListItem
-            className={styles.contact_list_item}
             key={id}
             name={name}
             number={number}

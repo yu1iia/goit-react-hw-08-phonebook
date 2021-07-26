@@ -1,12 +1,13 @@
-import React from "react";
-import css from "./ContactFormListItem.module.css";
+import React from 'react';
+import styles from './ContactFormListItem.module.css';
 
 const ContactFormListItem = ({ id, name, number, onRemove }) => (
   <>
-    <li key={id} className={css.contactListItem}>
-      <p> {name} : </p>
-      <p> {number} </p>
-      <button type="button" onClick={onRemove}>
+    <li key={id} className={styles.contactListItem}>
+      <p>
+        {name} : {number}
+      </p>
+      <button className={styles.deleteButton} type="button" onClick={onRemove}>
         Delete
       </button>
     </li>
