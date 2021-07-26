@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d56f10a61712bbad74e0ace3a3651c9",
+    "revision": "e3e5ea826eacc68dce55fa26711b61a7",
     "url": "/goit-react-hw-08-phonebook/index.html"
   },
   {
-    "revision": "46a21434b6554b3ec815",
-    "url": "/goit-react-hw-08-phonebook/static/css/3.529689b6.chunk.css"
+    "revision": "866caac86f04b1dc8718",
+    "url": "/goit-react-hw-08-phonebook/static/css/3.bb4f844f.chunk.css"
   },
   {
     "revision": "380b772a7842bd76e65e",
     "url": "/goit-react-hw-08-phonebook/static/css/4.bcba9364.chunk.css"
   },
   {
-    "revision": "f12e82f6c8ebb77b4623",
+    "revision": "bbcf10b654a800b03212",
     "url": "/goit-react-hw-08-phonebook/static/css/main.c6b81991.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/goit-react-hw-08-phonebook/static/js/2.dcdc3017.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "46a21434b6554b3ec815",
-    "url": "/goit-react-hw-08-phonebook/static/js/3.2fc269aa.chunk.js"
+    "revision": "866caac86f04b1dc8718",
+    "url": "/goit-react-hw-08-phonebook/static/js/3.077ed0ad.chunk.js"
   },
   {
     "revision": "380b772a7842bd76e65e",
@@ -44,12 +44,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/goit-react-hw-08-phonebook/static/js/7.29a88693.chunk.js"
   },
   {
-    "revision": "f12e82f6c8ebb77b4623",
-    "url": "/goit-react-hw-08-phonebook/static/js/main.28bc057d.chunk.js"
+    "revision": "bbcf10b654a800b03212",
+    "url": "/goit-react-hw-08-phonebook/static/js/main.a6a46859.chunk.js"
   },
   {
-    "revision": "ef70ce18b3755bc17c1e",
-    "url": "/goit-react-hw-08-phonebook/static/js/runtime-main.653df028.js"
+    "revision": "e38c07f53ff6e66651f9",
+    "url": "/goit-react-hw-08-phonebook/static/js/runtime-main.e20e0c46.js"
   },
   {
     "revision": "1c3f4ef779330cc2557ba3835416269b",
