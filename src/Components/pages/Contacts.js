@@ -52,14 +52,15 @@ class ContactsPage extends Component {
     const { name, number } = this.state;
 
     return (
-      <>
+      <div className={styles.contacts}>
         {this.props.alert && <Alert alert={alert} />}
 
         <h2 className={styles.contactListTitle}>Contacts</h2>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="Name">
+          <label htmlFor="Name" className={styles.form_label}>
             Name
             <input
+              className={styles.form_input}
               type="text"
               value={name}
               onChange={this.handleChange}
@@ -67,9 +68,10 @@ class ContactsPage extends Component {
             />
           </label>
 
-          <label>
+          <label className={styles.form_label}>
             Number:
             <input
+              className={styles.form_label}
               type="text"
               value={number}
               onChange={this.handleChange}
@@ -77,10 +79,13 @@ class ContactsPage extends Component {
             />
           </label>
 
-          <button type="submit"> Add contact</button>
+          <button type="submit" className={styles.addButton}>
+            {' '}
+            Add contact
+          </button>
         </form>
         <ContactFormList />
-      </>
+      </div>
     );
   }
 }

@@ -3,12 +3,11 @@
   margin-bottom: 20px;
   font-size: 34px;
   font-weight: 700;
-  color: rgb(115, 115, 120);
 }
 .contactListTitle {
-  font-size: 36px;
-  font-weight: 800;
-  color: rgb(88, 102, 179);
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
 }
 .appear {
   transform: translateX(-100%);
@@ -24,4 +23,36 @@
   font-family: Arial, Helvetica, sans-serif;
   margin: 50px auto;
   text-align: right;
+}
+.contacts {
+  margin: 25px auto;
+  padding: 15px 20px 35px;
+  width: 80%;
+
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 5px rgba(179, 182, 178, 0.94);
+  background-color: rgba(179, 182, 178, 0.7);
+}
+.form_label {
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+}
+.form_input {
+  display: block;
+  margin: 5px auto;
+}
+.addButton {
+  display: block;
+  margin: 25px auto;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 20px;
+  transition: all 0.25s ease-in-out;
+}
+.addButton:hover {
+  box-shadow: 0px 0px 3px 3px rgba(137, 145, 135, 0.94);
+  font-weight: 700;
+  cursor: pointer;
 }

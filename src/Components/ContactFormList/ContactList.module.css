@@ -1,12 +1,29 @@
-.contactList {
+.contact_list {
   display: flex;
   min-width: 400px;
   height: 100%;
   padding-left: 15px;
   flex-direction: column;
+  margin: 0 auto;
+  display: flex;
+  margin: 10px;
 }
-
-.enter {
+.contact__container {
+  width: 350px;
+  padding: 10px;
+}
+.contact_list_item {
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+}
+.contact_container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-weight: 500;
+}
+/* .enter {
   transform: scale(0);
 }
 .enterActive {
@@ -19,4 +36,4 @@
 .exitActive {
   transform: scale(0);
   transition: all 500ms linear;
-}
+} */

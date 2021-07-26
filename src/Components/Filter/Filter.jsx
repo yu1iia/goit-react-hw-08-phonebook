@@ -1,17 +1,20 @@
-import React from "react";
-import { connect } from "react-redux";
-import phoneBookActions from "../../redux/phoneBookActions/phoneBookActions";
-import phoneBookSelectors from "../../redux/phoneBookActions/phoneBookSelectors";
+import React from 'react';
+import { connect } from 'react-redux';
+import phoneBookActions from '../../redux/phoneBookActions/phoneBookActions';
+import phoneBookSelectors from '../../redux/phoneBookActions/phoneBookSelectors';
+
+import styles from './Filter.module.css';
 
 const Filter = ({ value, onChangeFilter }) => (
   <>
-    <label>
+    <label className={styles.filter_label}>
       <p>Find contacts by name</p>
       <input
+        className={styles.filter_input}
         type="text"
         name="filter"
         value={value}
-        onChange={(e) => {
+        onChange={e => {
           // console.log(e.target.value);
           onChangeFilter(e.target.value);
         }}
@@ -20,7 +23,7 @@ const Filter = ({ value, onChangeFilter }) => (
   </>
 );
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   value: phoneBookSelectors.getFilter(state),
 });
 

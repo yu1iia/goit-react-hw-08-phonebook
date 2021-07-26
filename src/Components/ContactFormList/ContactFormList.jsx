@@ -12,7 +12,7 @@ const ContactFormList = ({ contacts, onRemoveContacts }) => (
     {/* {this.props.contacts.length > 1 && <Filter />} */}
 
     <Filter />
-    <TransitionGroup component="ul" className={styles.contactList}>
+    <TransitionGroup component="ul">
       {contacts.map(({ id, name, number }) => (
         <CSSTransition
           key={id}
@@ -21,6 +21,7 @@ const ContactFormList = ({ contacts, onRemoveContacts }) => (
           unmountOnExit
         >
           <ContactFormListItem
+            className={styles.contact_list_item}
             key={id}
             name={name}
             number={number}
