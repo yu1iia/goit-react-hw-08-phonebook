@@ -14,12 +14,7 @@ const ContactFormList = ({ contacts, onRemoveContacts }) => (
     <Filter />
     <TransitionGroup component="ul">
       {contacts.map(({ id, name, number }) => (
-        <CSSTransition
-          key={id}
-          timeout={1000}
-          classNames={styles}
-          unmountOnExit
-        >
+        <CSSTransition key={id} timeout={250} classNames={styles} unmountOnExit>
           <ContactFormListItem
             key={id}
             name={name}
